@@ -11,7 +11,7 @@ var fs = require('fs');
 var markov = require('markov');
 var m = markov();
 
-fs.readFile('../sauce/agile.txt', 'utf8', function(err, data) {
+fs.readFile('sauce/agile.txt', 'utf8', function(err, data) {
   if (err) {
     console.log(err);
   }
