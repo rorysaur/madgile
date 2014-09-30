@@ -17,8 +17,9 @@ module.exports = function(robot) {
   m.seed(stream, function() {
     console.log('seeded');
     robot.hear(/^.*agile.*$/i, function(msg) {
-      console.log(msg);
-      msg.send(m.respond(msg.match[0]), 16).join(' ');
+      console.log(msg.match[0]);
+      msg.send('lol');
+      msg.send(m.respond(msg.match[0], 16).join(' '));
     });
   });
 };
