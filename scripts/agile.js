@@ -12,6 +12,9 @@ var markov = require('markov');
 var m = markov();
 
 fs.readFile('../sauce/agile.txt', 'utf8', function(err, data) {
+  if (err) {
+    console.log(err);
+  }
   console.log(data.split(' ').length + ' words read in agile.txt.');
 });
 
