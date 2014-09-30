@@ -15,7 +15,9 @@ var stream = fs.createReadStream(__dirname + '../sauce/agile.txt');
 
 module.exports = function(robot) {
   m.seed(stream, function() {
+    console.log('seeded');
     robot.hear(/^.*agile.*$/i, function(msg) {
+      console.log(msg);
       msg.send(m.respond(msg.match[0]), 16).join(' ');
     });
   });
