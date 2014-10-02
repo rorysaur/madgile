@@ -5,7 +5,7 @@
 //   None
 //
 // Commands:
-//   agile - Returns a sentence from agile sauce text.
+//   agiles inspire me - Returns a sentence from agile sauce text.
 
 var fs = require('fs');
 
@@ -19,7 +19,7 @@ module.exports = function(robot) {
     var count = sentences.length;
     console.log(count + ' sentences read in agile.txt.');
     
-    robot.hear(/agile/i, function(msg) {
+    robot.hear(/agiles inspire me/i, function(msg) {
       var idx = Math.floor(Math.random() * (count - 1));
       var response = sentences[idx];
       msg.send(response);
