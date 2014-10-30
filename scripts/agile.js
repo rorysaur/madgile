@@ -19,7 +19,7 @@ module.exports = function(robot) {
     var count = sentences.length;
     console.log(count + ' sentences read in agile.txt.');
     
-    robot.hear(/agiles inspire me/i, function(msg) {
+    robot.hear(/madgile inspire me/i, function(msg) {
       var idx = Math.floor(Math.random() * (count - 1));
       var response = sentences[idx];
       msg.send(response);
