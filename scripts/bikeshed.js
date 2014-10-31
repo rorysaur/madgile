@@ -1,21 +1,20 @@
 // Description:
-//   Bike Shed - alerts users when they may be shedding bikes
+//   Embular
 //
 // Dependencies:
 //   None
 //
 // Commands:
-//   listens for sentences containing the words angular && ember
+//   responds to sentences containing the words angular && ember
 
 
 module.exports = function(robot) {
 
-  var enhancers = ['bar', 'hot tub', 'million users', 'lot of agile synergy', 'continuous integration server built in', 'touch screen interface', 'network of offshore bank accounts', 'test driven API', 'large extended family of other bikesheds', 'lot of fixed gear bicycles all over the place', 'deep sense of civic responsibility', 'secret that it will never discuss with anyone', 'direct line to the governors office'];
-  var colors = ['red', 'green', 'blue', 'pink', 'black', 'orange', 'magenta', 'yellow ochre', 'burnt sienna'];
-
+  var technologies = ['C', 'PHP', 'vanilla javascript', 'jQuery', 'scraps of newspaper', 'a waffle iron', 'rspec', 'the hip hop virtual machine', 'java', 'Paul Graham\'s implementation of LISP'];
+  var cssess = ['twitter bootstrap', 'imageMagick', 'adobe photoshop', 'wordpress', 'a can-do attitude', 'plain CSS', 'windows XP', 'surrealism', 'ruby on rails', 'a fresh pot of coffee'];
 
   robot.hear(/(angular.*ember|ember.*angular)/i, function(msg) {
-    response = 'I think that the bikeshed should be painted '+colors[~~(Math.random() * colors.length)]+' and have a '+enhancers[~~(Math.random() * enhancers.length)];
+    response = 'angular? ember? have we considered building our front-end with '+technologies[~~(Math.random() * technologies.length)]+' and '+cssess[~~(Math.random() * cssess.length)]+'? :bike: ';
     msg.send(response);
   });
 };
