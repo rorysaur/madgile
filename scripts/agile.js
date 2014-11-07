@@ -5,7 +5,7 @@
 //   None
 //
 // Commands:
-//   agiles inspire me - Returns a sentence from agile sauce text.
+//   hubot inspire me - Returns a sentence from agile sauce text.
 
 var fs = require('fs');
 
